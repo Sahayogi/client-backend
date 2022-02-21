@@ -14,6 +14,8 @@ app.use(cors());
 app.use('/api/login', require('./routes/auth'));
 app.use('/api/wallet', require('./routes/wallet'));
 app.use('/api/project', require('./routes/project'));
+app.use('/api/bank', require('./routes/bank'));
+
 
 // Add headers
 app.use(function (req, res, next) {
