@@ -15,7 +15,7 @@ app.use('/api/login', require('./routes/auth'));
 app.use('/api/wallet', require('./routes/wallet'));
 app.use('/api/project', require('./routes/project'));
 app.use('/api/bank', require('./routes/bank'));
-
+app.use('/api/vendor', require('./routes/vendor'));
 
 // Add headers
 app.use(function (req, res, next) {
