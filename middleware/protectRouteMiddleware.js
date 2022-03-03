@@ -22,9 +22,9 @@ exports.registeredUserAccess = async (req, res, next) => {
       return next(new ErrorResponse('No user found with this id', 404));
     }
     console.log('User access');
-    if (user.typeOfUser === 'Admin' || user.typeOfUser === 'AidAgency') {
-      return next(new ErrorResponse('Please Use Admin Dashboard', 400));
-    }
+    // if (user.typeOfUser === 'Admin' || user.typeOfUser === 'AidAgency') {
+    //   return next(new ErrorResponse('Please Use Admin Dashboard', 400));
+    // }
 
     req.user = user;
     next();
