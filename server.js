@@ -16,7 +16,7 @@ app.use('/api/wallet', require('./routes/wallet'));
 app.use('/api/project', require('./routes/project'));
 app.use('/api/bank', require('./routes/bank'));
 app.use('/api/vendor', require('./routes/vendor'));
-
+app.use('/api/info', require('./routes/info'));
 // Add headers
 app.use(function (req, res, next) {
   // Website you wish to allow to connect

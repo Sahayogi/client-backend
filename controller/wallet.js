@@ -10,6 +10,7 @@ exports.updateWallet = async (req, res, next) => {
     const updatedUser = await user.save();
     console.log(updatedUser);
   } catch (error) {
+    console.log('Error Loged');
     next(error);
   }
   return res.status(200).json({
