@@ -30,3 +30,19 @@ exports.getProjectDetail = async (req, res, next) => {
     return next(new ErrorResponse('Project Not Found', 404));
   }
 };
+
+exports.updateDonatedAmount = async (req, res, next) => {
+  const { frId, amount } = req.body;
+  console.log('Hi');
+  try {
+    const project = await Project.findOne({ frCount: parseInt(frId) });
+    project.collectedToken += Number(amount);
+    project.save();
+    res.status(200).json({
+      success: true,
+      data: project,
+    });
+  } catch (error) {
+    return next(new ErrorResponse('Project Not Found', 404));
+  }
+};

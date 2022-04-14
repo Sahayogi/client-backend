@@ -20,10 +20,7 @@ const projectSchema = new mongoose.Schema(
       trim: true,
       minlength: 3,
     },
-    projectImage: {
-      type: String,
-      required: [true, 'Please Provide image field'],
-    },
+    frCount: Number,
     collectedToken: {
       type: Number,
       default: 0,
