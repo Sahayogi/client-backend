@@ -13,6 +13,7 @@ const router = express.Router();
 router.route('/').get(getProjects);
 router.route('/:id').get(getProjectDetail);
 router.route('/updateAmount').post(updateDonatedAmount);
+
 // Update donated amount
 
 module.exports = router;

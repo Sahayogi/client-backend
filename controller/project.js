@@ -5,7 +5,7 @@ const ErrorResponse = require('../utils/errorResponse');
 exports.getProjects = async (req, res, next) => {
   let projects;
   try {
-    const projects = await Project.find();
+    const projects = await Project.find().sort('-relateBlockProj');
     res.status(200).json({
       success: true,
       data: projects,
